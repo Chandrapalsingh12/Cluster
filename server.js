@@ -37,7 +37,7 @@ app.use(express.json());
 app.use("/peerjs", peerServer);
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
-app.use(cookie({ maxAge: 30 * 24 * 60 * 60 * 1000, keys: ["soumenkhara"] }));
+app.use(cookie({ maxAge: 30 * 24 * 60 * 60 * 1000, keys: ["lucifer"] }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static("public"));
