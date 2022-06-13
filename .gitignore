@@ -1,4 +1,4 @@
 node_modules
-# .env
-# idea.*
-# public/build
+.env
+idea.*
+public/build
