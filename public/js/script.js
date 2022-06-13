@@ -13,13 +13,14 @@ function detectMob() {
         return navigator.userAgent.match(toMatchItem);
     });
 }
+
 const socket = io("/");
 const videoGrid = document.getElementById("video-grid");
 // const name = prompt("Your name");
 const myPeer = new Peer(undefined, {
     path: "/peerjs",
     host: "/",
-    port: "3000",
+    port: "443",
 });
 var Peer_ID;
 const myVideo = document.createElement("video");
@@ -200,7 +201,7 @@ function addVideoStream(video, stream, peerId, user) {
     videoWrapper.appendChild(elementsWrapper);
     videoWrapper.appendChild(video);
 
-     videoGrid.append(videoWrapper);
+    videoGrid.append(videoWrapper);
 
     const observer = new MutationObserver((mutationsList, observer) => {
         const removeNodeLength = mutationsList[0].removedNodes.length;
